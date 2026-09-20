@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="code.js" defer></script>
+    <style>
+        :root {--grid-size: 20%}
+        #container {line-height:0; height:600px;width:600px;/*opacity:0.1;background-color:grey;*/}
+        body {margin:0;padding:0;}
+        span {line-height:0;margin:0;padding:0;background-color:white;width:var(--grid-size);height:var(--grid-size);display:inline-block;box-sizing: border-box; }
+        br {height:0;margin:0;}
+        .border {border:1px solid rgb(177, 176, 176);}
+        span:hover {background-color:grey;}
+        /*these arent used yet - fix hover with them later (classList.toggle(clicked)*/
+        .clicked {background-color:black}
+        .unclicked {background-color:white}
+    </style>
+    
+</head>
+<body>   
+    <form>
+        <label for="number">Side length :</label>
+        <input id="units" name="number" type="number"></input>
+        <button onclick="createGrid()"type="button">reset </button>
+        <button type="button" id="borderToggle" onclick="toggleBorder()">Border</button> 
+        <!--add hover selector-->
+    </form> 
+ <div style="display:flex;justify-content: center;margin-top:5%;">
+    <div id="container">
+
+    </div>
+</div>
+</body>
+</html>
