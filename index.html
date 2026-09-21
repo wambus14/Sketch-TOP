@@ -12,10 +12,8 @@
         span {line-height:0;margin:0;padding:0;background-color:white;width:var(--grid-size);height:var(--grid-size);display:inline-block;box-sizing: border-box; }
         br {height:0;margin:0;}
         .border {border:1px solid rgb(177, 176, 176);}
-        span:hover {background-color:grey;}
-        /*these arent used yet - fix hover with them later (classList.toggle(clicked)*/
-        .clicked {background-color:black}
-        .unclicked {background-color:white}
+        span:hover.hoveron {background-color:grey;}
+        #container span.clicked {background-color:black}
     </style>
     
 </head>
@@ -25,7 +23,7 @@
         <input id="units" name="number" type="number"></input>
         <button onclick="createGrid()"type="button">reset </button>
         <button type="button" id="borderToggle" onclick="toggleBorder()">Border</button> 
-        <!--add hover selector-->
+        <button type="button" id="hoverToggle" onclick="toggleHover()">Hover Off</button>
     </form> 
  <div style="display:flex;justify-content: center;margin-top:5%;">
     <div id="container">
@@ -34,3 +32,10 @@
 </div>
 </body>
 </html>
+<!-- idea list
+ timed color removal
+ color select
+ random color
+ multiple things to click through
+ dragging to click multiple
+-->
